@@ -8,23 +8,22 @@ html, body{
 }
 body{
     font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(117, 117, 117, 0.336) !important;
 }
 /* Cuerpo de la calculadora */
-.calculator-Body{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(2, 2, 2);
-    opacity:0.6;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.calculator-body__center{
-    padding-top: 5rem;
+#calculator-body-center{
+    justify-items: center;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    margin-top: 3rem;
+    background-color: rgba(100, 100, 100, 0.692);
+    opacity: 0.5;
+    width: 380px;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-right: 1.2rem;
+    border-radius: 20px;
 }
 
 /* Pantalla de la calculadora */
@@ -33,8 +32,7 @@ body{
     width: 300px;
     height: 3rem;
     margin-bottom: 1.5rem;
-    background-color: rgb(228, 228, 228);
-    opacity: 0.9;
+    background-color: white;
     border: 0;
     border-radius: 10px;
     padding-left: 20px;
@@ -50,14 +48,56 @@ body{
     margin-bottom: 0.8rem;
     margin-left: 0.7rem;
     border-radius: 10px;
-    background-color: rgb(228, 228, 228);
-    opacity: 0.9;
+    background-color: white;
     font-weight: 900;
     border: 0;
+    transition: all 0.3s ease-in;
+    font-size: 18px;
 }
-.Credits{
-    margin-top: 1.5rem;
+.num-container button:hover{
+    transform: scale(1.1);
+    font-weight: 900;
+    background-color: rgba(61, 61, 61, 0.692);
     color: white;
+}
+#igual{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: all 0.3s;
+    animation: 1.6s igual_animate infinite alternate linear;
+}
+@keyframes igual_animate{
+    0%{
+        opacity: 0.9;
+    }
+    30%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.7;
+    }
+}
+
+#recolor{
+    background-color: rgba(37, 37, 37, 0.692);
+    color: white;
+}
+/* Credits */
+.Credits{
+    color: rgb(114, 114, 114);
     opacity: 0.8;
     font-weight: bold;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+/* responsive */
+@media(max-width:500px) and (min-width:370px){
+    #calculator-body-center{
+        margin-top: 0;
+    }
+    .Credits{
+        display: none;
+    }
 }
