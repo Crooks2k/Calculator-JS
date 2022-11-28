@@ -38,6 +38,8 @@ body{
     padding-left: 20px;
     font-weight: 900;
     font-size: 20px;
+    text-align: end;
+    padding-right: 20px;
 }
 /* Estilizado de botones */
 .num-container button{
